@@ -1,0 +1,18 @@
+# Blueprint de Render para desplegar ZyroAPI como servicio web.
+# En Render: New → Blueprint → selecciona este repositorio y Render
+# creará el servicio automáticamente con esta configuración.
+# Referencia: https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: zyroapi
+    runtime: node
+    plan: free
+    region: virginia
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /api
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
