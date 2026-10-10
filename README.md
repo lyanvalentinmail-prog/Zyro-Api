@@ -1,6 +1,6 @@
 # ZyroAPI
 
-Documentación profesional de **APIs REST gratuitas para tus proyectos**: 27 endpoints reales, sin API key y sin registro.
+Documentación profesional de **APIs REST gratuitas para tus proyectos**: 34 endpoints reales, sin API key y sin registro.
 
 - **Diseño**: blanco minimalista, esquinas cuadradas, responsive mobile-first.
 - **Stack**: Next.js 14, TypeScript, Tailwind CSS.
