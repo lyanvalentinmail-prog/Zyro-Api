@@ -22,6 +22,23 @@ npm run build
 npm start
 ```
 
+## Despliegue en Render (Blueprint)
+
+El repositorio incluye `render.yaml`, así que puedes desplegar con un clic:
+
+1. Sube tu rama a GitHub.
+2. En [Render](https://render.com), ve a **New → Blueprint**.
+3. Selecciona el repositorio `Zyro-Api` (rama con el archivo `render.yaml`).
+4. Confirma el nombre del servicio (`zyroapi`) y pulsa **Apply**.
+
+Render instalará dependencias, compilará (`npm run build`) y arrancará el servidor
+(`npm start`, que usa el puerto `PORT` automáticamente). El health check apunta a
+`GET /api`.
+
+> Nota: en el plan gratuito el servicio se suspende por inactividad y los enlaces
+> del acortador (`/api/tools/shorten`) viven en memoria, así que se reinician con
+> cada despliegue o reactivación.
+
 ## Estructura
 
 ```
