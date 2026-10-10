@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Prioridad absoluta: esquinas totalmente cuadradas en TODO */
+*,
+*::before,
+*::after {
+  border-radius: 0 !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+body {
+  background-color: #ffffff;
+  color: #475569;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.dark body {
+  background-color: #0b1220;
+  color: #cbd5e1;
+}
+
+::selection {
+  background-color: #1d4ed8;
+  color: #ffffff;
+}
+
+/* Bloques de código: desplazamiento horizontal interno, sin romper el layout */
+pre {
+  tab-size: 2;
+  -webkit-overflow-scrolling: touch;
+}
+
+pre code {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+
+/* Scrollbar fina y discreta */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+.dark * {
+  scrollbar-color: #334155 transparent;
+}
+
+/* Foco visible accesible */
+:focus-visible {
+  outline: 2px solid #1d4ed8;
+  outline-offset: 2px;
+}
+
+/* Tablas de parámetros */
+.params-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Animación del panel móvil */
+.sidebar-panel {
+  transition: transform 0.25s ease-in-out;
+}
+
+/* Detalle del JSON resaltado */
+.json-key {
+  color: #1d4ed8;
+}
+.dark .json-key {
+  color: #93c5fd;
+}
+.json-string {
+  color: #047857;
+}
+.dark .json-string {
+  color: #6ee7b7;
+}
+.json-number {
+  color: #b45309;
+}
+.dark .json-number {
+  color: #fbbf24;
+}
+.json-bool {
+  color: #7c3aed;
+}
+.dark .json-bool {
+  color: #c4b5fd;
+}
+.json-null {
+  color: #64748b;
+}
